@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sorteo de Equipos Aleatorios</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Pantalla 1 -->
+  <div id="pantalla1">
+    <h1>Sorteo de Equipos</h1>
+    <label>Lista de participantes (uno por línea, máximo 100):</label>
+    <textarea id="participantes"></textarea>
+
+    <div class="flex controls">
+      <div>
+        <label>Tipo de sorteo:</label>
+        <select id="modo">
+          <option value="equipos">Número de equipos</option>
+          <option value="tamanio">Participantes por equipo</option>
+        </select>
+      </div>
+      <div>
+        <label id="labelValor">Cantidad de equipos:</label>
+        <input type="number" id="valor" min="1" />
+      </div>
+      <div>
+        <label>Título de equipos:</label>
+        <input type="text" id="tituloEquipos" placeholder="Ej: Equipo" />
+      </div>
+    </div>
+    <div class="controls">
+      <button id="btnGenerar">Generar</button>
+    </div>
+  </div>
+
+  <!-- Pantalla 2 -->
+  <div id="pantalla2">
+    <h1 id="tituloPantalla2"></h1>
+    <div class="columnas" id="listaEquipos"></div>
+    <div class="controls">
+      <button id="btnDescargar">Descargar JPG</button>
+      <button id="btnCopiarTxt">Copiar al portapapeles</button>
+      <button id="btnCopiarCols">Copiar columnas</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
